@@ -13,27 +13,24 @@ function forLoop(makeArray) { // passed
   return makeArray;
 }
 
-/*
+
 function whileLoop(countdown) { // 
-  
-  while (countdown = 100, countdown >= 0, --countdown){
-    if (countdown === 0){
-      // console.log('done');
-    }
+  let countdown1 = countdown -1;
+  while (countdown1 >= 0){
+    --countdown1;
+    console.log('done');
   }
   return 'done';
-}*/
+}
 
 function doWhileLoop(makeArray) { // 
   function maybeTrue() {
-  return Math.random() * 100;
+   return Math.random() >= 0.5;
   }
+  
     do {
       makeArray.pop();
-    } while (maybeTrue(makeArray)) {
-      return false;
-    }
-  return doWhileLoop();
+    } while (makeArray.length > 0 || maybeTrue())
+    
+  return makeArray;
 }
-  
-  
